@@ -8,6 +8,7 @@ public class Calculadora {
 
     public int realizarOperacion(String operacion) {
         if (operacion.equals("suma")) return suma();
+        if (operacion.equals("dividir")) return dividir();
         if (operacion.equals("resta")) return resta();
         return 0;
     }
@@ -16,6 +17,14 @@ public class Calculadora {
     public int suma() {
         return num1 + num2;
     }
+
+    public int dividir() {
+        if (num2 == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero");
+        }
+        return num1 / num2;
+    }
+    
 
     public int resta() {
         return num1 - num2;
