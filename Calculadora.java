@@ -8,10 +8,17 @@ public class Calculadora {
 
     public int realizarOperacion(String operacion) {
         if (operacion.equals("suma")) return suma();
+        if (operacion.equals("resta")) return resta();
         return 0;
     }
+    
 
     public int suma() {
         return num1 + num2;
     }
+
+    public int resta() {
+        return num1 - num2;
+    }
+    
 }
